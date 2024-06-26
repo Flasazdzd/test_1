@@ -1,7 +1,7 @@
 // Chemin: test_1-main/frontend/src/api/itemsAPI.js
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:3000/api/items';
+const baseUrl = 'https://3001-automatic-yodel-qw499pwj7p4cxv9w.githubpreview.dev';
 
 export const getAllItems = async () => {
   try {
