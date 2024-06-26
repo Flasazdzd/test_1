@@ -1,21 +1,10 @@
+// Chemin: test_1-main/backend/models/Item.js
 const mongoose = require('mongoose');
 
 const itemSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    description: {
-        type: String,
-        trim: true
-    },
-    price: {
-        type: Number,
-        required: true
-    }
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  quantity: { type: Number, required: true }
 });
 
-const Item = mongoose.model('Item', itemSchema);
-
-module.exports = Item;
+module.exports = mongoose.model('Item', itemSchema);
