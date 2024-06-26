@@ -1,22 +1,16 @@
-import logo from './logo.svg';
+// Chemin: test_1-main/frontend/src/App.js
+import React from 'react';
 import './App.css';
+import ItemsComponent from './components/ItemsComponent'; // Importez votre composant
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ItemsComponent />  // Utilisez votre composant ItemsComponent ici
       </header>
     </div>
   );
