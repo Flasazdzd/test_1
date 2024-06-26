@@ -51,6 +51,11 @@ app.delete('/items/:id', (req, res) => {
   res.status(200).send({ msg: "Item deleted" });
 });
 
+// Add a default route to handle the root ("/")
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
