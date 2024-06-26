@@ -7,7 +7,7 @@ const PORT = 3001;
 // Remplacez cette URL par l'URL réelle de votre frontend
 const allowedOrigin = 'https://automatic-yodel-qw499pwj7p4cxv9w.github.dev';
 
-// Utilisez CORS pour permettre uniquement à votre frontend d'accéder :
+// Utilisez CORS pour permettre uniquement à votre frontend d'accéder
 app.use(cors({
     origin: allowedOrigin,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
