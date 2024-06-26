@@ -1,24 +1,23 @@
-// frontend/src/App.js
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:3001/items')
-      .then(response => {
-        setItems(response.data);
-      })
-      .catch(error => console.error('Error:', error));
-  }, []);
-
   return (
-    <div>
-      <h1>Items</h1>
-      {items.map(item => (
-        <div key={item.id}>{item.name}</div>
-      ))}
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
