@@ -1,28 +1,39 @@
+// Chemin: test_1-main/frontend/src/api/itemsAPI.js
 import axios from 'axios';
 
-const API_URL = '/api/items'; // Assurez-vous que l'URL correspond à votre route API
+const baseUrl = 'http://localhost:3000/api/items';
 
-export const getItems = async () => {
-    const response = await axios.get(API_URL);
+export const getAllItems = async () => {
+  try {
+    const response = await axios.get(baseUrl);
     return response.data;
-};
-
-export const getItem = async (id) => {
-    const response = await axios.get(`${API_URL}/${id}`);
-    return response.data;
+  } catch (error) {
+    throw error;
+  }
 };
 
 export const createItem = async (item) => {
-    const response = await axios.post(API_URL, item);
+  try {
+    const response = await axios.post(baseUrl, item);
     return response.data;
+  } catch (error) {
+    throw error;
+  }
 };
 
 export const updateItem = async (id, item) => {
-    const response = await axios.put(`${API_URL}/${id}`, item);
+  try {
+    const response = await axios.put(`${baseUrl}/${id}`, item);
     return response.data;
+  } catch (error) {
+    throw error;
+  }
 };
 
 export const deleteItem = async (id) => {
-    const response = await axios.delete(`${API_URL}/${id}`);
-    return response.data;
+  try {
+    await axios.delete(`${baseUrl}/${id}`);
+  } catch (error) {
+    throw error;
+  }
 };
